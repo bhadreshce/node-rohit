@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop</title>
+</head>
+
+<body>
+    <script>
+        let n = 6
+        let str = '*'
+        let space = '&nbsp&nbsp'
+        for (let i = 1; i < n; i++) {
+            for (let j = 0; j <= n - i; j++) {
+                document.write(space)
+            }
+            for (let j = 0; j < i; j++) {
+                document.write(str)
+            }
+            document.write('<br>')
+        }
+    </script>
+</body>
+
+</html>

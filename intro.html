@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Table</title>
+</head>
+
+<body>
+    <div id="table-container"></div>
+
+    <script>
+        const std = [
+            { name: "haresh", age: 34, marks: 34 },
+            { name: "suresh", age: 67, marks: 89 },
+            { name: "ramesh", age: 89, marks: 54 },
+            { name: "mukesh", age: 90, marks: 67 }
+        ];
+
+        let table = '<table border="1">';
+        table += '<tr><th>Name</th><th>Age</th><th>Marks</th></tr>';
+
+        std.forEach((result) => {
+            table += `<tr>
+                        <td>${result.name}</td>
+                        <td>${result.age}</td>
+                        <td>${result.marks}</td>
+                      </tr>`;
+        });
+
+        table += '</table>';
+
+        document.write(table)
+
+
+        // function 
+        // settimeout
+        //setinterval
+        // events 
+    </script>
+</body>
+
+</html>

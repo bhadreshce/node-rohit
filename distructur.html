@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        // let names = ['bhavesh', 'haresh', 'ramesh', 'suresh']
+        // let [first = 'bbb', second, third, fourth] = names;
+        // console.log(first);
+
+
+        // map  -  
+
+        let std = [{ name: "bhadresh", age: 25, marks: 30 },
+        { name: "mahendra", age: 20, marks: 40 },
+        { name: "bhadresh", age: 17, marks: 50 }
+        ]
+
+        // let newStd = std.map((result) => {
+        // if (result.name == 'mahendra') {
+        //     return { name: result.name, age: result.age, marks: result.marks + 10 }
+        // } else {
+        //     return result
+        // }
+
+        // })
+        // console.log(newStd);
+        // filter - array - filter - new array 
+        let newStd = std.filter((result) => {
+            return result.marks > 40
+        })
+        console.log(newStd);
+    </script>
+</body>
+
+</html>
