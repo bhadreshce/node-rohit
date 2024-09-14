@@ -6,7 +6,8 @@ const port = 3000
 const viewPath = path.join(__dirname, './views')
 const public = path.join(__dirname, './public')
 const partial = path.join(__dirname, './partials')
-
+const giolocation = require('./giolocation');
+const getWeather = require('./weather')
 // settings 
 app.set('view engine', 'hbs')
 app.set('views', viewPath)
@@ -21,6 +22,25 @@ app.get('/', (req, res) => {
 
 app.get('/weather', (req, res) => {
     res.render('weather')
+})
+
+app.get('/getdata', (req, res) => {
+    const location = req.query.location;
+    console.log(location);
+
+    giolocation.gio(location, (result, error) => {
+        if (error) {
+            return res.send({ error: error })
+        } else {
+            console.log(result);
+            // getWeather.getWeather(result, (res, error) => {
+            //     res.send({
+            //         name: "bhadresh"
+            //     })
+            // })
+        }
+    })
+
 })
 
 
