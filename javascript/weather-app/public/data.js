@@ -68,7 +68,15 @@ function getWeather(cityname) {
     fetch('getdata?location=' + location).then((res) => {
         return res.json()
     }).then((result) => {
-        console.log(result);
+        console.log('whether data', result);
+        if (result.error) {
+            document.getElementById('description').innerText = result.error
+        } else {
+            document.getElementById('citydata').innerText = cityname
+            document.getElementById('temrature').innerText = result.main.temp
+            document.getElementById('description').innerText = result.weather[0].main
+        }
+
     })
 
 }
